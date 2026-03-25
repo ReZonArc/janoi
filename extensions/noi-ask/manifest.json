@@ -32,6 +32,9 @@
         "https://jimeng.jianying.com/*",
         "https://chat.deepseek.com/*",
         "https://metaso.cn/*",
+        "https://kimi.moonshot.cn/*",
+        "https://xinghuo.xfyun.cn/*",
+        "https://yiyan.baidu.com/*",
         "https://yuanbao.tencent.com/*"
       ],
       "js": ["main.js"],

@@ -70,6 +70,12 @@
       "url": "https://chat.deepseek.com"
     },
     {
+      "id": "noi:kimi",
+      "parent": "noi@ai",
+      "text": "Kimi",
+      "url": "https://kimi.moonshot.cn"
+    },
+    {
       "id": "noi:githubcopilot",
       "parent": "noi@ai",
       "text": "GitHub Copilot",
