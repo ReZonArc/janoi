@@ -438,6 +438,49 @@ class MetasoAsk extends NoiAsk {
   }
 }
 
+class KimiAsk extends NoiAsk {
+  static name = 'Kimi';
+  static url = 'https://kimi.moonshot.cn';
+
+  static sync(message) {
+    const inputElement = document.querySelector('.editor-kit-container [contenteditable=true]');
+    if (inputElement) {
+      inputElement.focus();
+      inputElement.innerHTML = message;
+      const inputEvent = new InputEvent('input', {
+        bubbles: true,
+        cancelable: true,
+      });
+      inputElement.dispatchEvent(inputEvent);
+    }
+  }
+
+  static submit() {
+    const btn = document.querySelector('.send-button');
+    if (btn) btn.click();
+  }
+}
+
+class XinghuoAsk extends NoiAsk {
+  static name = 'Xinghuo'; // 讯飞星火
+  static url = 'https://xinghuo.xfyun.cn';
+
+  static submit() {
+    const btn = document.querySelector('#sendBtn');
+    if (btn) btn.click();
+  }
+}
+
+class YiyanAsk extends NoiAsk {
+  static name = 'Yiyan'; // 文心一言
+  static url = 'https://yiyan.baidu.com';
+
+  static submit() {
+    const btn = document.querySelector('.send-button');
+    if (btn) btn.click();
+  }
+}
+
 class YuanbaoAsk extends NoiAsk {
   static name = 'YuanBao'; // 腾讯元宝
   static url = 'https://yuanbao.tencent.com/chat';
@@ -482,5 +525,8 @@ window.NoiAsk = {
   JimengAsk,
   DeepSeekAsk,
   MetasoAsk,
+  KimiAsk,
+  XinghuoAsk,
+  YiyanAsk,
   YuanbaoAsk,
 };
